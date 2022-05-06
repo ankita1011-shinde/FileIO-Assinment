@@ -67,7 +67,7 @@ namespace WindowsFirstForm
                 int id = Convert.ToInt32(txtId.Text);
                 string Name=txtName.Text;
                 string Location = txtLoc.Text;
-                FileStream fs = new FileStream(@"D:\TestFolder\FistFile.txt", FileMode.Create, FileAccess.Write);
+                fs = new FileStream(@"D:\TestFolder\FistFile.txt", FileMode.Create, FileAccess.Write);
 
                 BinaryWriter bw = new BinaryWriter(fs);
                 bw.Write(id);
@@ -83,7 +83,7 @@ namespace WindowsFirstForm
             }
             finally
             {
-                
+                fs.Close();
             }
         }
 
@@ -105,7 +105,7 @@ namespace WindowsFirstForm
             }
             finally
             {
-                fs.close();
+                fs.Close();
             }
         }
     }
