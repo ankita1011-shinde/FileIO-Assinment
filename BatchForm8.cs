@@ -27,7 +27,7 @@ namespace WindowsFirstForm
                 batch.BatchName=batch.BatchName;
                 batch.StartDate = batch.StartDate;
                 batch.EndDate = batch.EndDate;
-                batch.Location=batch.Location
+                batch.Location = batch.Location;
 
                 fs = new FileStream(@"D:\TestFolder\Batch", FileMode.Create, FileAccess.Write);
                 BinaryFormatter binary = new BinaryFormatter();
@@ -48,7 +48,7 @@ namespace WindowsFirstForm
         {
             try
             {
-                BatchInfo batch = new BatchInfo;
+                BatchInfo batch = new BatchInfo();
                 fs = new FileStream(@"D:\TestFolder\Batch", FileMode.Open, FileAccess.Read);
                 BinaryFormatter binary = new BinaryFormatter();
                 batch = (BatchInfo)binary.Deserialize(fs);

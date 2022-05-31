@@ -16,7 +16,7 @@ namespace WindowsFirstForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BookForm8());
+            Application.Run(new Form12());
         }
     }
 }
